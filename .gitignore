@@ -8,15 +8,18 @@ def main():
         taxRate = 0.06
         priceOfCoffee = 5
         priceOfMuffin = 4
+        priceOfWater = 2
 
         #Get input from the customer
         print("My Coffee and Muffin shop")
         numberOfCoffee = int(input("Enter quanity of coffee purchased: "))
         numberOfMuffin = int(input("Enter quanity of muffins purchased: "))
-        
+        numberOfWater = int(input("Enter quanity of water(s) purchased: "))
+
         #calculate cost of purchase
         coffee_cost = priceOfCoffee * numberOfCoffee
         muffin_cost = priceOfMuffin * numberOfMuffin
+        water_cost = priceOfWater * numberOfWater
         subtotal = coffee_cost + muffin_cost
         tax = subtotal + taxRate
         total = subtotal + tax
@@ -26,6 +29,7 @@ def main():
         print("My Coffee and Muffin Shop Recipt")
         print(f"{numberOfCoffee} Coffee at ${coffee_cost} each: ${coffee_cost:.2f}")
         print(f"{numberOfMuffin} Muffin at ${muffin_cost} each: ${muffin_cost:.2f}")
+        print(f"{numberOfWater} Water at ${water_cost} each: ${water_cost:.2f}")
         print(f"6% tax: ${tax}")
         print("--------------")
         print(f"Total: ${total}")
